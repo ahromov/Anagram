@@ -10,7 +10,7 @@ import org.junit.Test;
 
 /**
  *
- * @author Andrii
+ * @author Andrii Hromov
  */
 public class AnagramTest {
     
