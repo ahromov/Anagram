@@ -28,7 +28,7 @@ public class Main {
             }
         }
 
-	    System.out.println(Arrays.toString(output));
+	Arrays.asList(output).stream().forEach(c -> System.out.print(c));
     }
 
 }
