@@ -13,9 +13,9 @@ public class Main {
 
     public static void main(String[] args) {
         char[] input = "a1bcd efg!h".toCharArray();
-	    char[] output = new char[input.length];
-	    int charIndex = 0;
-	    char charachter;
+	char[] output = new char[input.length];
+	int charIndex = 0;
+	char charachter;
 
         for (int i = input.length - 1; i >= 0; i--) {
             charachter = input[i];
