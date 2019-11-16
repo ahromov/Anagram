@@ -12,12 +12,23 @@ package anagram;
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length != 0) {
-            Anagram anagram = new Anagram();
-            anagram.printRevertedString(args[0]);
-        } else {
-            System.out.println("No argument(s)! USAGE: java Anagram \"Some line\"");
+        char[] input = "a1bcd efg!h".toCharArray();
+	    char[] output = new char[input.length];
+	    int charIndex = 0;
+	    char charachter;
+
+        for (int i = input.length - 1; i >= 0; i--) {
+            charachter = input[i];
+            if (Character.isLetter(charachter)) {
+            output[charIndex] = charachter;
+            charIndex++;
+            } else {
+            output[i] = charachter;
+            charIndex++;
+            }
         }
+
+	    System.out.println(Arrays.toString(output));
     }
 
 }
