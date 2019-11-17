@@ -18,7 +18,7 @@ public class AnagramTest {
     }
 
     @Test
-    public void testGetAnagramm() {
+    public void getAnagrammTest() {
 	String input = "a1bcd efg!h";
 	String expResult = "d1cba hgf!e";
 	String result = Anagramm.getAnagramm(input);
