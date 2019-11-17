@@ -10,7 +10,7 @@ public class Anagramm {
 	    outputText.append(revertWord(word)).append(" ");
 	}
 
-	return outputText.toString();
+	return outputText.toString().trim();
     }
 
     private static String revertWord(String word) {

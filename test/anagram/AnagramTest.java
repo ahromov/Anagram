@@ -13,32 +13,16 @@ import org.junit.Test;
  * @author Andrii Hromov
  */
 public class AnagramTest {
-    
+
     public AnagramTest() {
     }
-    
-    /**
-     * Test of printRevertedString method, of class Anagram.
-     */
+
     @Test
-    public void testPrintRevertedString() {
-        System.out.println("printRevertedString");
-        String input = "";
-        Anagram instance = new Anagram();
-        instance.printRevertedString(input);
+    public void testGetAnagramm() {
+	String input = "a1bcd efg!h";
+	String expResult = "d1cba hgf!e";
+	String result = Anagramm.getAnagramm(input);
+	assertEquals(expResult, result);
     }
 
-    /**
-     * Test of createAnagramedWords method, of class Anagram.
-     */
-    @Test
-    public void testCreateAnagramedWords() {
-        System.out.println("createAnagramedWords");
-        String input = "Hello1";
-        Anagram instance = new Anagram();
-        String expResult = "olleH1";
-        String result = instance.createAnagramedWords(input);
-        assertEquals(expResult, result);
-    }
-    
 }
