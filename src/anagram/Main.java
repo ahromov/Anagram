@@ -12,7 +12,7 @@ package anagram;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(Anagramm.getAnagramm("a1bcd efg!h"));
+	System.out.println(Anagramm.getAnagramm("a1bcd efg!h"));
     }
 
 }
