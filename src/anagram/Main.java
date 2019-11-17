@@ -12,23 +12,39 @@ package anagram;
 public class Main {
 
     public static void main(String[] args) {
-        char[] input = "a1bcd efg!h".toCharArray();
-	char[] output = new char[input.length];
-	int charIndex = 0;
-	char charachter;
+        String inputText = "a1bcd efg!h";
 
-        for (int i = input.length - 1; i >= 0; i--) {
-            charachter = input[i];
-            if (Character.isLetter(charachter)) {
-            output[charIndex] = charachter;
-            charIndex++;
-            } else {
-            output[i] = charachter;
-            charIndex++;
-            }
-        }
+	StringBuilder outputText = new StringBuilder();
 
-	Arrays.asList(output).stream().forEach(c -> System.out.print(c));
+	String[] words = inputText.split(" ");
+	for (String word : words) {
+	    char[] outputWord = new char[word.length()];
+
+	    for (int i = 0; i < word.length(); i++) {
+		if (!Character.isLetter(word.charAt(i))) {
+		    outputWord[i] = word.charAt(i);
+		}
+	    }
+
+	    char character;
+
+	    for (int i = word.length() - 1, startIndex = 0; i >= 0; i--) {
+		character = word.charAt(i);
+		if (Character.isLetter(character)) {
+		    if (outputWord[startIndex] == '\u0000') {
+			outputWord[startIndex] = character;
+		    } else {
+			startIndex++;
+			outputWord[startIndex] = character;
+		    }
+		    startIndex++;
+		}
+	    }
+
+	    outputText.append(new String(outputWord)).append(" ");
+	}
+
+	System.out.println(outputText.toString());
     }
 
 }
